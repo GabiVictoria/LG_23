@@ -1,0 +1,11 @@
+�Carteira 
+Codigo: CA2204
+Ativos: Fundo: Codigo: AIEC11, Preço Atual:68.82, Empresa: Autonomy Edificios Corporativos Fundo DE Investimento ImobiliarioCotas: 250.0
+Fundo: Codigo: BBDC4, Preço Atual:15.0, Empresa: Banco Bradesco SA Preference SharesCotas: 300.0
+Ação: Codigo: DISB34, Preço Atual:27.12, Empresa: DisneyQuantidade: 50
+Ação: Codigo: AAGR, Preço Atual:300.0, Empresa: ASSET BANK AGRONEGÓCIOS FIAGRO IMOBILIARIOQuantidade: 80
+
+OQuantidade: 5
+
+ade: 5
+

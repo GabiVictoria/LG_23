@@ -45,3 +45,10 @@ Alguma das funcionalidades da classe carteira são:
 - permite que o investidor crie ou remova ativos da carteira de investimentos.
 - permite o armazenamento de dados e informações sobre os ativos.
 
+Corretora: essa classe representa as empresas que intermediam a movimentação dos ativos entre a bolsa e os investidores, e tal classe relaciona-se com a bolsa, os investidores e seus ativos.
+
+Algumas de suas funcionalidades são: 
+- Processar a compra de um ativo;
+- Checar se a quantidade de cotas dos ativos desejadas é plausível de compra;
+- Verificar se o ativo é ação ou fundo;
+- Realização de tais transações entre a bolsa;

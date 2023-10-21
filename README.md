@@ -26,7 +26,7 @@ Requisitos mínimos:
 
     -Histórico de ordens de compra e vendas de ativos.
 
-# Fianlidades e Funcionalidades das classes
+# Finalidades e Funcionalidades das classes
 
 Investidor: define os investidores que participam das transações e investimentos realizados na bolsa de valores. Dessa forma, no programa é possível criar objetos específicos para os investidores e armazenar os dados pessoais de cada um no código. A classe investidor pode se relacionar com a carteira, com os ativos e com a corretora. Essa classe também permite que os investidores realizem transações de ativos por meio da classe carteira.
 

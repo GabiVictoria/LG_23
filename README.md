@@ -6,6 +6,7 @@ Alison Jorge Amaro
 Emanuel Aguilar Pena 
 Gabrielle Victória Ribeiro Batista 
 Gabriel Tarifa de Oliveira
+
 User names Github respectivamente:
 ffflux
 GabiVictoria

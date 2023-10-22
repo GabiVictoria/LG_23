@@ -56,11 +56,13 @@ Algumas das funcionalidades da classe corretora são:
 Ações: a classe ações representa uma ação de uma empresa. Ela herda todas as funcionalidades da classe Ativos.
 
 Por ser uma classe herdeira ela adiciona as seguintes funcionalidades específicas:
+
  -Armazena informações adicionais sobre a empresa emissora da ação, como o setor e o patrimônio líquido.
 
 Fundos: a classe fundos representa um fundo de investimento. Ela herda todas as funcionalidades da classe Ativos.
 
 Por ser uma classe herdeira ela adiciona as seguintes funcionalidades específicas:
+
  -Armazena informações adicionais sobre o tipo do fundo, a taxa de administração e a taxa de performance.
  -Permite calcular o rendimento do fundo atravésdas informações armazenadas por ela .
 

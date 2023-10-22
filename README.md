@@ -77,6 +77,6 @@ Ativos: em uma bolsa de valores, ativos são qualquer coisa que uma pessoa ou um
 A classe Ativos é uma classe pai que representa um ativo financeiro, que pode ser uma ação, um fundo ou outro tipo de investimento.
 
 Algumas das funcionalidades da classe ativos são:
-    - Armazena o código, o nome, o preço e a quantidade do ativo.
-    - Permite realizar transações de compra e venda de ativos.
-    - Permite calcular o desempenho do ativo, através das informações armazenadas por ela.
+ - Armazena o código, o nome, o preço e a quantidade do ativo.
+ - Permite realizar transações de compra e venda de ativos.
+ - Permite calcular o desempenho do ativo, através das informações armazenadas por ela.

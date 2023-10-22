@@ -1,4 +1,4 @@
-# LG_23
+ LG_23
 Este programa simula um pregão na bolsa de valores. Ele permite que os usuários criem ordens de compra e venda de ações, e que essas ordens sejam executadas de acordo com as regras do mercado.
 
 Os desenvolvedores são:  
@@ -64,22 +64,9 @@ Por ser uma classe herdeira ela adiciona as seguintes funcionalidades específic
 -Armazena informações adicionais sobre o tipo do fundo, a taxa de administração e a taxa de performance.
 -Permite calcular o rendimento do fundo atravésdas informações armazenadas por ela .
 
-Classe Bolsa
+Bolsa: a classe Bolsa representa uma bolsa de valores, que é um mercado organizado onde são negociados ativos financeiros, como ações, títulos e derivativos. 
 
-A classe Bolsa representa uma bolsa de valores, que é um mercado organizado onde são negociados ativos financeiros, como ações, títulos e derivativos. A classe Bolsa possui as seguintes funcionalidades:
-
-- Armazena uma lista de ativos que são negociados na bolsa.
-
-- Permite que os investidores realizem transações de compra e venda de ativos.
-
-- Calcula o desempenho da bolsa, como o índice de referência.
-
-Funcionalidades
-
-A classe Bolsa possui as seguintes funcionalidades:
-
-- Armazena uma lista de ativos que são negociados na bolsa.
-
-- Permite que os investidores realizem transações de compra e venda de ativos.
-
-- Calcula o desempenho da bolsa, como o índice de referência.
+Algumas das funcionalidades da classe bolsa são:
+ - Armazena uma lista de ativos que são negociados na bolsa.
+ - Permite que os investidores realizem transações de compra e venda de ativos.
+ - Calcula o desempenho da bolsa, como o índice de referência.

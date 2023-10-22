@@ -1,4 +1,4 @@
- LG_23
+# LG_23
 Este programa simula um pregão na bolsa de valores. Ele permite que os usuários criem ordens de compra e venda de ações, e que essas ordens sejam executadas de acordo com as regras do mercado.
 
 Os desenvolvedores são:  
@@ -56,13 +56,13 @@ Algumas das funcionalidades da classe corretora são:
 Ações: a classe ações representa uma ação de uma empresa. Ela herda todas as funcionalidades da classe Ativos.
 
 Por ser uma classe herdeira ela adiciona as seguintes funcionalidades específicas:
--Armazena informações adicionais sobre a empresa emissora da ação, como o setor e o patrimônio líquido.
+ -Armazena informações adicionais sobre a empresa emissora da ação, como o setor e o patrimônio líquido.
 
 Fundos: a classe fundos representa um fundo de investimento. Ela herda todas as funcionalidades da classe Ativos.
 
 Por ser uma classe herdeira ela adiciona as seguintes funcionalidades específicas:
--Armazena informações adicionais sobre o tipo do fundo, a taxa de administração e a taxa de performance.
--Permite calcular o rendimento do fundo atravésdas informações armazenadas por ela .
+ -Armazena informações adicionais sobre o tipo do fundo, a taxa de administração e a taxa de performance.
+ -Permite calcular o rendimento do fundo atravésdas informações armazenadas por ela .
 
 Bolsa: a classe Bolsa representa uma bolsa de valores, que é um mercado organizado onde são negociados ativos financeiros, como ações, títulos e derivativos. 
 

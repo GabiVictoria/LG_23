@@ -68,18 +68,18 @@ Classe Bolsa
 
 A classe Bolsa representa uma bolsa de valores, que é um mercado organizado onde são negociados ativos financeiros, como ações, títulos e derivativos. A classe Bolsa possui as seguintes funcionalidades:
 
-• Armazena uma lista de ativos que são negociados na bolsa.
+- Armazena uma lista de ativos que são negociados na bolsa.
 
-• Permite que os investidores realizem transações de compra e venda de ativos.
+- Permite que os investidores realizem transações de compra e venda de ativos.
 
-• Calcula o desempenho da bolsa, como o índice de referência.
+- Calcula o desempenho da bolsa, como o índice de referência.
 
 Funcionalidades
 
 A classe Bolsa possui as seguintes funcionalidades:
 
-• Armazena uma lista de ativos que são negociados na bolsa.
+- Armazena uma lista de ativos que são negociados na bolsa.
 
-• Permite que os investidores realizem transações de compra e venda de ativos.
+- Permite que os investidores realizem transações de compra e venda de ativos.
 
-• Calcula o desempenho da bolsa, como o índice de referência.
+- Calcula o desempenho da bolsa, como o índice de referência.

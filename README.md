@@ -72,3 +72,11 @@ Algumas das funcionalidades da classe bolsa são:
  - Armazena uma lista de ativos que são negociados na bolsa.
  - Permite que os investidores realizem transações de compra e venda de ativos.
  - Calcula o desempenho da bolsa, como o índice de referência.
+
+Ativos: em uma bolsa de valores, ativos são qualquer coisa que uma pessoa ou um investidor possua que possa ser convertido em dinheiro. No código, a classe ativos se relaciona com as classes: carteira, ações, bolsa, fundos, e investidor. Relaciona e apresenta as variáveis que são: "codigoNegociacao", "precoAtual" e "empresa" , para que as outras entidades que se relacionem com ativos tenham acesso a esses dados.
+A classe Ativos é uma classe pai que representa um ativo financeiro, que pode ser uma ação, um fundo ou outro tipo de investimento.
+
+Algumas das funcionalidades da classe ativos são:
+    - Armazena o código, o nome, o preço e a quantidade do ativo.
+    - Permite realizar transações de compra e venda de ativos.
+    - Permite calcular o desempenho do ativo, através das informações armazenadas por ela.

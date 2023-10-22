@@ -66,7 +66,7 @@ Por ser uma classe herdeira ela adiciona as seguintes funcionalidades específic
 
 Bolsa: a classe Bolsa representa uma bolsa de valores, que é um mercado organizado onde são negociados ativos financeiros, como ações, títulos e derivativos. 
 
-Algumas das funcionalidades da classe bolsa são:
+Algumas das funcionalidades da classe bolsa são: 
  - Armazena uma lista de ativos que são negociados na bolsa.
  - Permite que os investidores realizem transações de compra e venda de ativos.
  - Calcula o desempenho da bolsa, como o índice de referência.

@@ -80,3 +80,6 @@ Algumas das funcionalidades da classe ativos são:
  - Armazena o código, o nome, o preço e a quantidade do ativo.
  - Permite realizar transações de compra e venda de ativos.
  - Permite calcular o desempenho do ativo, através das informações armazenadas por ela.
+
+
+- link do video- https://youtu.be/9Mx3A76aJl0-

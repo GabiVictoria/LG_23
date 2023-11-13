@@ -24,7 +24,7 @@ public class Lista <T>{
     }
 
     // exibe lista
-    public void exibir(){
+    public void exibe(){
         Node<T> current = head;
         while(current != null){
             System.out.print(current.data);
@@ -41,9 +41,7 @@ public class Lista <T>{
         }else{
             Node<T> current = head;
             while(current.next != null){
-                //enquanto existir proximo, não fica null
                 current = current.next;
-                // aponta para o novo nó criado
             }
             current.next = newNode;
         }
@@ -84,7 +82,7 @@ public class Lista <T>{
     //remover um elemento na primeira posição
     public void remove(){
         if (head == null) {
-            return; //Lista vazia,nada para remover.
+            return;
         }
 
         if (tam == 1) {
@@ -132,6 +130,15 @@ public class Lista <T>{
         }
 
         tam--;
+    }
+
+    public void trocaValor(int index,T newValue){
+        if(index<0||index>= tam){
+            throw new IndexOutOfBoundsException("indice fora dos limites");
+        }
+        Node<T> current = head;
+        for (int i=0; i< index; i++){ current = current.next;}
+        current.data=newValue;
     }
 
     public Node<T> getHead() {

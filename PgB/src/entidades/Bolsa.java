@@ -4,41 +4,28 @@ import estruturasDados.Lista;
 
 public class Bolsa {
     private String nome;
-    private Lista<Ativos> ativos;
+    private Lista<Ativos> ativoVenda;
 
     public Bolsa(String nome) {
         this.nome = nome;
-        this.ativos = new Lista();
-    }
-
-    public void adicionarAtivo(Ativos ativo) {
-        ativos.add(ativo);
+        this.ativoVenda = new Lista();
     }
 
 
-    public void processaOrdemCompra(Investidor investidor, String codigoAtivo, int quantidade, double precoM) {
-        for (int i = 0; i<ativos.getTam(); i++) {
-            Ativos ativo = ativos.returnValor(i);
-            if (ativo.getCodigo().equals(codigoAtivo) && ativo.getPrecoAtual() <= precoM) {
-                if (ativo instanceof Acoes) {
-                    Acoes acao = (Acoes) ativo;
-                    if (acao.getQuant() >= quantidade) {
-                        acao.setQuant(acao.getQuant() - quantidade);
-                        investidor.addAtivonaCarteira(new Acoes(codigoAtivo, ativo.getPrecoAtual(), ativo.getEmpresa(), quantidade),"1254");
-                        System.out.println(investidor.getNome() + " comprou " + quantidade + " ações de " + codigoAtivo);
-                    } else {
-                        System.out.println("Quantidade de ações disponíveis insuficiente pra compra.");
-                    }
-                } else if (ativo instanceof Fundos) {
-                    Fundos fundo = (Fundos) ativo;
-                    double valorCompra = quantidade * ativo.getPrecoAtual();
-                    if (fundo.getParticipacao() >= valorCompra) {
-                        fundo.setParticipacao(fundo.getParticipacao() - valorCompra);
-                        investidor.addAtivonaCarteira(new Fundos(codigoAtivo, ativo.getPrecoAtual(),ativo.getEmpresa(), valorCompra),"1234");
-                        System.out.println(investidor.getNome() + " comprou " + quantidade + " cotas do fundo " + codigoAtivo);
-                    } else {
-                        System.out.println("Saldo insuficiente para compra do fundo.");
-                    }
+
+    public void processaOrdemCompra(Investidor investidorComp, Ativos ativo, int quantidade) {
+        Investidor ic = investidorComp;
+        for (int i = 0; i<ativoVenda.getTam(); i++) {
+            Ativos a = ativoVenda.returnValor(i);
+            if (a.getCodigo()== ativo.getCodigo()) {
+                if (ativo.getQuantidade()>=quantidade){
+                a.setQuantidade(a.getQuantidade()-quantidade);
+                a.getInvestidor().setSaldo(a.getInvestidor().getSaldo()+ativo.getPrecoAtual());
+                    System.out.println("Investidor"+ic.getNome()+" vendeu ativo "+a.getCodigo());
+                    investidorComp.setSaldo(investidorComp.getSaldo()-ativo.getPrecoAtual());
+                    Acoes tst = new Acoes(a.getCodigo(),a.getPrecoAtual(),a.getEmpresa(),ic,quantidade);
+                    investidorComp.addAtivonaCarteira(tst);
+                    System.out.println("Investidor"+ic.getNome()+" comprou ativo "+a.getCodigo());
                 }
             }
         }
@@ -46,15 +33,13 @@ public class Bolsa {
 
 
 
+   public void processaOrdemVenda(Investidor investidor, Ativos ativo){
+        if (ativo.getInvestidor().getSenha()!=""){ ativoVenda.add(ativo);}
+   }
+
     @Override
     public String toString() {
-        String exibi;
-        exibi ="\n"+ "Bolsa: " + "Nome: "+nome+ ", Ativos: ";
-        for (int i = 0; i < ativos.getTam(); i++) {
-            Ativos a = ativos.returnValor(i);
-            exibi+= a.toString();
-        }
-
-        return exibi;
+        return "Bolsa:" +
+                "nome:'" + nome + "\n";
     }
 }

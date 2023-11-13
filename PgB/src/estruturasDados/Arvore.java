@@ -53,14 +53,14 @@ public class Arvore {
         }
         return node;
     }
-    public void emOrdem() {
-        inorder(root);
+    public void ordem() {
+        emOrdem(root);
     }
-    private void inorder(Node node) {
+    private void emOrdem(Node node) {
         if (node != null) {
-            inorder(node.left);
+            emOrdem(node.left);
             System.out.print(node.key + " ");
-            inorder(node.right);
+            emOrdem(node.right);
         }
     }
     public void preorder() {

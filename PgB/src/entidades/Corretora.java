@@ -1,37 +1,43 @@
 package entidades;
 
-import estruturasDados.Arvore;
 
 public class Corretora {
     private Bolsa bolsa;
-    private Arvore investidores;
+    private String nome;
 
-    public Corretora(Bolsa bolsa) {
+    public Corretora(Bolsa bolsa, String nome) {
+        this.bolsa = bolsa;
+        this.nome=nome;
+    }
+
+    public void processaOrdemCompra(Investidor investidor, Ativos ativo, int quantidade) {
+        bolsa.processaOrdemCompra(investidor, ativo, quantidade);
+    }
+    public void processaOrdemVenda(Investidor investidor, Ativos ativo) {
+        bolsa.processaOrdemVenda(investidor, ativo);
+    }
+
+    public Bolsa getBolsa() {
+        return bolsa;
+    }
+
+    public void setBolsa(Bolsa bolsa) {
         this.bolsa = bolsa;
     }
 
-    public void processaOrdemCompra(Investidor investidor, String codigoAtivo, int quantidade, double precoM) {
-        bolsa.processaOrdemCompra(investidor, codigoAtivo, quantidade, precoM);
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     @Override
     public String toString() {
-        return "Corretora: " +
-                "Bolsa: " + bolsa.toString() +
-                "\nÁrvore de investidores: "+ investidores.toString() +
-                '\n';
-    }
-
-    public Arvore getInvestidores() {
-        return investidores;
-    }
-
-    public void setInvestidores(Arvore investidores) {
-        this.investidores = investidores;
-    }
-
-    public int getSizeInvestidores(){
-        return investidores.getTam();
+        return "Corretora:" +
+                "\nbolsa:" + bolsa.toString() +
+                ", nome='" + nome;
     }
 }
 

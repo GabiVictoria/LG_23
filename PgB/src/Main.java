@@ -1,3 +1,4 @@
+import ordenacao.BubbleSort;
 import text.SalvarEmArquivo;
 import entidades.Acoes;
 import entidades.Ativos;
@@ -80,6 +81,24 @@ public class Main {
         }
 
         
+    }
+    /*
+    * SalvarEmArquivo.Salvar()
+    * SalvarEmArquivo.Salvar()
+    * SalvarEmArquivo.Salvar()
+    * SalvarEmArquivo.Salvar()
+    * SalvarEmArquivo.Salvar()
+    * */
+    public static void sorting(){
+        Lista<Acoes> ac = new Lista<>();
+        for (int i =0; i<ativos.getSize();i++){
+            Object t = ativos.retornarValor(i);
+            if (t instanceof Acoes){
+                Acoes acoa = (Acoes) t;
+                ac.add(acoa);
+            }
+        }
+        BubbleSort.sort10AcoesMaisVendidas(ac);
     }
 
 }

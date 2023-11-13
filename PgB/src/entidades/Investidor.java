@@ -7,15 +7,18 @@ public class Investidor {
     private String senha;
     private String cpf;
     private String telefone;
+    private double saldo;
 
-    private Lista<Carteira> carteiras = new Lista<>();
+    private Carteira carteira;
 
 
-    public Investidor(String nome, String senha, String cpf, String telefone) {
+    public Investidor(String nome, String senha, String cpf, String telefone, double saldo, Carteira carteira) {
         this.nome = nome;
         this.senha = senha;
         this.cpf = regraFormat.formatCPF(cpf);
         this.telefone = regraFormat.FormatTelefone(telefone);
+        this.carteira =carteira;
+        this.saldo=saldo;
     }
 
     public String getNome() {
@@ -50,30 +53,16 @@ public class Investidor {
         this.telefone = telefone;
     }
 
-    public void setCarteiras(Lista<Carteira> carteiras) {
-        this.carteiras = carteiras;
+    public void setCarteiras(Carteira carteira) {
+        this.carteira = carteira;
     }
 
-    public void enviarOrdemCompra(Corretora corretora, String codigoAtivo, int quantidade, double precoMaximo) {
-        corretora.processaOrdemCompra(this, codigoAtivo, quantidade, precoMaximo);
+
+
+    public void addAtivonaCarteira(Ativos a) {
+        carteira.addAtivo(a);
     }
 
-    public Lista<Carteira> getCarteiras() {
-        return carteiras;
-    }
-
-    public void addAtivonaCarteira(Ativos a, String codigo) {
-        for (int i = 0; i < carteiras.getTam(); i++) {
-            Carteira c = carteiras.returnValor(i);
-            if (c.getCodigo().equals(codigo)) {
-                c.addAtivo(a);
-            }
-        }
-    }
-
-    public void addCarteira(Carteira c) {
-        carteiras.add(c);
-    }
 
     @Override
     public String toString() {
@@ -82,12 +71,22 @@ public class Investidor {
                 "Nome: " + nome +
                 "\nCódigo de acesso: "+ senha +
                 "\nCPF: "+ cpf +
-                "\nTelefone: "+ telefone+ "\nCarteiras: ";
-        for (int i = 0; i < carteiras.getTam(); i++) {
-            Carteira c = carteiras.returnValor(i);
-            exibir += c.toString();
-        }
-        exibir += "\n";
+                "\nTelefone: "+ telefone+ "\nCarteira: " +carteira;
+
         return exibir+"\n";
+    }
+    public void enviaOrdemCompra(Corretora corretora, Ativos ativo, int quantidade){
+        corretora.processaOrdemCompra(this,ativo,quantidade);
+    }
+    public void enviaOrdemVenda(Corretora corretora, Ativos ativo){
+        corretora.processaOrdemVenda(this,ativo);
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 }

@@ -3,8 +3,8 @@ package entidades;
 public class Fundos extends Ativos {
     private double participacao;
 
-    public Fundos(String codigo, double precoAtual, String empresa, double participacao) {
-        super(codigo, precoAtual, empresa);
+    public Fundos(String codigo, double precoAtual, String empresa,Investidor investidor, int quantidade ,double participacao) {
+        super(codigo, precoAtual, empresa, investidor,quantidade);
         this.participacao = participacao;
     }
 

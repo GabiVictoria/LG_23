@@ -1,18 +1,18 @@
 package ordenacao;
 import entidades.Investidor;
 public class ShellSort {
-    public static void sortShell(int[] arr) {
-        int n = arr.length;
+    public static void sortShell(int[] av) {
+        int n = av.length;
         int gap = n / 2;
         while (gap > 0) {
             for (int i = gap; i < n; i++) {
-                int temp = arr[i];
+                int temp = av[i];
                 int j = i;
-                while (j >= gap && arr[j - gap] > temp) {
-                    arr[j] = arr[j - gap];
+                while (j >= gap && av[j - gap] > temp) {
+                    av[j] = av[j - gap];
                     j -= gap;
                 }
-                arr[j] = temp;
+                av[j] = temp;
             }
             gap /= 2;
         }

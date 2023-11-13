@@ -11,7 +11,7 @@ public class Fila {
         ultimo = -1;
     }
 
-    public void insere(int elemento) {
+    public void inserir(int elemento) {
         if (ultimo == elementos.length - 1) {
             System.out.println("A fila esta cheia");
             return;

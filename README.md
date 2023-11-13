@@ -82,4 +82,4 @@ Algumas das funcionalidades da classe ativos são:
  - Permite calcular o desempenho do ativo, através das informações armazenadas por ela.
 
 
-- link do video- https://youtu.be/9Mx3A76aJl0-
+- link do video-https://youtu.be/ZmnHSi8FcMY-
